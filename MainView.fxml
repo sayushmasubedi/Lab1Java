@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane alignment="CENTER" hgap="10" padding="25" vgap="10" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/20" fx:controller="com.example.sayu.MainController">
+    <children>
+        <Label text="From:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="fromComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="USD"/>
+                    <String fx:value="CAD"/>
+                    <String fx:value="COP"/>
+                    <String fx:value="YEN"/>
+                    <String fx:value="EGP"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label text="To:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="toComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="USD"/>
+                    <String fx:value="CAD"/>
+                    <String fx:value="COP"/>
+                    <String fx:value="YEN"/>
+                    <String fx:value="EGP"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="amountTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Button fx:id="convertButton" text="Convert" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label fx:id="resultLabel" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </children>
+</GridPane>
